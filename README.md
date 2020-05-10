@@ -12,7 +12,8 @@ First if all, a few features of MongoDB:
   - Databases hold collections of documents.
   - Documents are stored in collections, that are analogous to tables in relational databases. 
   
-So, the following shows the structure:
+## Structure
+```
   Database_1
     Collection_1
       Record_1
@@ -29,11 +30,12 @@ So, the following shows the structure:
  Database_2
   Collection_1
     Record_1
+```
 
 To run the commands, you must open de cmd (Windows) or the relatives in your SO and type ```mongo``` to start.
   
  ## help
-  ```help``` This command will show you all the basic commads for use when you need to show where you are in and other help commands. Take a look at ir before jump to the following
+ ```help``` This command will show you all the basic commads for use when you need to show where you are in and other help commands. Take a look at ir before jump to the following
 
 ## Database
 To select a database to use, in the mongo shell, issue the use <db> statement, as in the following example:
