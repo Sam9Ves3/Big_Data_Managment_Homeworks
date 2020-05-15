@@ -54,25 +54,33 @@ of how visitors are navigating a website. These are the metrics you’ll support
     * Bounce-rate analysis
 
 
+
 # Chapter 2: Data model for Big Data 27
 
 1. **Properties of data**
-  * rawness:When designing your Big Data system, you want to be able to answer as many questions as possible. The rawer your data, the more questions you can ask of it. 
-  * immutability: in the relational database world, update is one of the fundamental operations. But for immutability you don’tupdate or delete data, you only add more.With an immutable schema, things look different. Rather than storing a current snapshot of the world, as done by the mutable schema, you create a separate record every time a user’s information evolves.
-  * perpetuity (or the “eternal trueness of data”): The key consequence of immutability is that each piece of data is true in perpetuity. That is, a piece of data, once true, must always be true. Immutability wouldn’t make sense without this property, and you saw how tagging each piece of data with a timestamp is a practical way to make data eternally true. This mentality is the same as when you learned history in school. The fact The United States consisted of thirteen states on July 4, 1776, is always true due to the specific date; the fact that the number of states has increased since then is captured in additional (also perpetual) data. 
+
+  * *Rawness:* When designing your Big Data system, you want to be able to answer as many questions as possible. The rawer your data, the more questions you can ask of it. 
+  * *Immutability:* in the relational database world, update is one of the fundamental operations. But for immutability you don’tupdate or delete data, you only add more.With an immutable schema, things look different. Rather than storing a current snapshot of the world, as done by the mutable schema, you create a separate record every time a user’s information evolves.
+  * *Perpetuity:* The key consequence of immutability is that each piece of data is true in perpetuity. That is, a piece of data, once true, must always be true. Immutability wouldn’t make sense without this property, and you saw how tagging each piece of data with a timestamp is a practical way to make data eternally true. This mentality is the same as when you learned history in school. The fact The United States consisted of thirteen states on July 4, 1776, is always true due to the specific date; the fact that the number of states has increased since then is captured in additional (also perpetual) data. 
 
 
 2. **The fact-based data model:**
+
   * Stores your raw data as atomic facts.
   * Keeps the facts immutable and eternally true by using timestamps
   * Ensures each fact is identifiable so that query processing can identify duplicates
   
 
-3. **Benefits of a fact-based model for Big Data:** With a fact-based model, the master dataset will be an ever-growing list of immutable, atomic facts. This isn’t a pattern that relational databases were built to support—if you come from a relational background, your head may be spinning. The good news is that by changing your data model paradigm, you gain numerous advantages. Specifically, your data:
+3. **Benefits of a fact-based model for Big Data:** 
+
+With a fact-based model, the master dataset will be an ever-growing list of immutable, atomic facts. This isn’t a pattern that relational databases were built to support—if you come from a relational background, your head may be spinning. The good news is that by changing your data model paradigm, you gain numerous advantages. Specifically, your data:
+
   * Is queryable at any time in its history
   * Tolerates human errors
   * Handles partial information
   * Has the advantages of both normalized and denormalized forms
   
   
-4. **Graph schemas:**  Each fact within a fact-based model captures a single piece of information. But the facts alone don’t convey the structure behind the data. That is, there’s no description of the types of facts contained in the dataset, nor any explanation of the relationships between them. The alternative is to use an enforceable schema that rigorously defines the structure of your facts. Enforceable schemas require a bit more work upfront such as JSON, but they guarantee all required fields are present and ensure all values are of the expected type. With these assurances, a developer will be confident about what data they can expect—that each fact will have a timestamp, that a user’s name will always be a string, and so forth. The key is that when a mistake is made creating a piece of data, an enforceable schema will give errors at that time, rather than when someone is trying to use the data later in a different system. The closer the error appears to the bug, the easier it is to catch and fix.
+4. **Graph schemas:**  
+
+Each fact within a fact-based model captures a single piece of information. But the facts alone don’t convey the structure behind the data. That is, there’s no description of the types of facts contained in the dataset, nor any explanation of the relationships between them. The alternative is to use an enforceable schema that rigorously defines the structure of your facts. Enforceable schemas require a bit more work upfront such as JSON, but they guarantee all required fields are present and ensure all values are of the expected type. With these assurances, a developer will be confident about what data they can expect—that each fact will have a timestamp, that a user’s name will always be a string, and so forth. The key is that when a mistake is made creating a piece of data, an enforceable schema will give errors at that time, rather than when someone is trying to use the data later in a different system. The closer the error appears to the bug, the easier it is to catch and fix.
