@@ -1,4 +1,4 @@
-** This is for showing the basic commands for querying in the MongoD shell **
+**This is for showing the basic commands for querying in the MongoD shell**
 
 ## Installation 
 This is the link onf the ownload page: https://www.mongodb.com/download-center
