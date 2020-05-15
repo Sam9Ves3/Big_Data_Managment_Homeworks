@@ -7,15 +7,17 @@ You are about to read some important aspects (according to my criteria) that bes
 
 1. **Typical problems encountered when scaling a traditional database**
 
-  ![Figure 1.1](/src/fig 1_2.png)
+![Figure 1.1](/src/fig 1_2.png)
   
   Imagine that your back end consists of an RDBMS with a table of that schema and a web server(Figure 1.1). After some success, you’ll   run into problems with both scalability and complexity: The database can’t keep up with the load, so write requests to increment       pageviews are timing out. the best approach is to use multiple database servers and spread the table across all the servers. Each       server will have a subset of the data for the table. This is known as horizontal partitioning or sharding. This technique spreads the   write load across multiple machines.
 
   Your code needs to know how to talk to the right shards, and if you make a mistake, there’s nothing preventing you from reading from or writing to the wrong shard. But the worst problem is that the system is not engineered for human mistakes. Mistakes in software are inevitable, and if you’re not engineering for it, you might as well be writing scripts that randomly corrupt data. Backups are not enough; the system must be carefully thought out to limit the damage a human mistake can cause. Human-fault tolerance is not optional. It’s essential, especially when Big Data adds so many more complexities to building applications.
+  
 
 2. **Why NoSQL is not a panacea**
 
   The past decade has seen a huge amount of innovation in scalable data systems. These include large-scale computation systems like Hadoop and databases such as Cassandra and Riak. These systems can handle very large amounts of data, but with serious trade-offs. These tools on their own are not a panacea. But when intelligently used in conjunction with one another, you can produce scalable systems for arbitrary data problems with human-fault tolerance and a minimum of complexity. This is the Lambda Architecture you’ll learn throughout the book.
+  
 
 3. **Thinking about Big Data systems from first principles**
 
@@ -29,13 +31,15 @@ The properties you should strive for in Big Data systems are:
   * Ad hoc queries
   * Minimal maintenance
   * Debuggability
+  
 
 4. **Lambda Architecture**
 
   Computing arbitrary functions on an arbitrary dataset in real time is a daunting problem. There’s no single tool that provides a complete solution. Instead, you have to use a variety of tools and techniques to build a complete Big Data system. The main idea of the Lambda Architecture is to build Big Data systems as a series of layers. Each layer satisfies a subset of the properties and builds upon the functionality provided by the layers beneath it.
 The beauty of the Lambda Architecture is that once data makes it through the batch layer into the serving layer, the corresponding results in the realtime views are no longer needed. This means you can discard pieces of the realtime view as they’re no longer needed. This is a wonderful result, because the speed layer is far more complex than the batch and serving layers. This property of the Lambda Architecture is called complexity isolation, meaning that complexity is pushed into a layer whose results are only temporary. If anything ever goes wrong, you can discard the state for the entire speed layer, and everything will be back to normal within a few hours.
 
-  ![Figure 1.1](/src/fig 1_11.png)
+ ![Figure 1.1](/src/fig 1_11.png)
+  
 
 5. **Introducing SuperWebAnalytics.com**
 
