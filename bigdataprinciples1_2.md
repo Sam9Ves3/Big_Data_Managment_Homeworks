@@ -89,7 +89,20 @@ With a fact-based model, the master dataset will be an ever-growing list of immu
   * Has the advantages of both normalized and denormalized forms
   
   
-**4. why the need for an enforceable schema?**  
+**4. What is a JSON file?**
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language. JSON is built on two structures:
+
+   * A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+
+   * An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
+    
+These are universal data structures. Virtually all modern programming languages support them in one form or another. It makes sense that a data format that is interchangeable with programming languages also be based on these structures.
+
+Douglas Crockford. (*n.d*). Introducing JSON. [Online]. retrieved from web site: https://www.json.org/json-en.html (May 15, 2020)
+
+  
+**5. Why the need for an enforceable schema?**  
 
 Information is stored as facts, and a graph schema describes the types of facts contained in the dataset. You’re all set, right? Well, not quite. You still need to decide in what format you’ll store your facts. A first idea might be to use a semistructured text format like JSON. This would provide simplicity and flexibility, allowing essentially anything to be written to the master dataset. To illustrate this problem, suppose you chose to represent someone’s age using JSON:
 
