@@ -121,7 +121,13 @@ You do not have to specify the _id field to return the field. It returns by defa
 ```
 db.inventory.find( {}, { _id: 0, item: 1, status: 1 } );
 ```
+## Query operators
 
+* $gt - Greater than.
+* $gte - Greater than or equal to.
+* $ne - No equal to.
+* $lt - Less than.
+* $lte - Less than or equal to.
 
 ## License
 Open source project
