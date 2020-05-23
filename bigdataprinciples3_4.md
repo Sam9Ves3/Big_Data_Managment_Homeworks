@@ -1,5 +1,4 @@
 # Chapter 3: Data model for Big Data: Illustration.
-# Chapter 1: A new paradigm for Big Data
 
 
 **1. What's the problem of writing raw data in JSON format**
@@ -49,6 +48,53 @@ the rest of your workflow, because anything getting past the validity check
 can be assumed to have the stricter properties you care about. But this approach
 doesn’t prevent the invalid data from being written to the master dataset and
 doesn’t help with determining the context in which the corruption happened.
+
+
+
+# Chapter 4: Data storage on the batch layer
+
+**1.Why batch layer storage system needs to be good at reading data?**
+
+Because is responsible for computing functions on the dataset to produce the batch views.
+
+**2. What are the two requisites of the writing operation in the batch layer?**
+
+* Effitient append of new data: The only write operation is to add new pieces of data, so it must be easy
+and efficient to append a new set of data objects to the master dataset.
+
+* Scalable storage: The batch layer stores the complete dataset—potentially terabytes or petabytes
+of data. It must therefore be easy to scale the storage as your dataset
+grows.
+
+
+**3. What is the requisites of the reading operation in the batch layer?**
+
+Support for parallel processing to handle large amounts of data in a scalable manner.
+
+**4. What is the biggest problem when using a key/value store for the master dataset**
+
+The biggest problem is that a key/value store has a lot of things you don’t need: random reads, random writes, and all
+the machinery behind making those work. In fact, most of the implementation of a key/value store is dedicated to these features you don’t need at all. Additionally, the key/value store indexes your data and provides unneeded services, which will increase your storage costs and lower your performance when reading and writing data.
+
+
+**5. What differentiates a file system from a key/value store?**
+
+Unlike a key/value store, a filesystem gives you exactly what you need and no more, while also not limiting your ability to tune storage cost versus processing cost. On top of that, filesystems implement fine-grained permissions systems, which are perfect for enforcing immutability.
+
+
+**6. What is a problem with regular file system?**
+
+Is that it exists on just a single machine, so you can only scale to the storage limits and processing power of that one machine
+
+
+**7. What does the distibuted file system technology does?**
+
+Distributed filesystems are quite similar to the filesystems you’re familiar with, except they spread their storage across a cluster of computers. They scale by adding more machines to the cluster. Distributed filesystems are designed so that you have fault tolerance when a machine goes down, meaning that if you lose one machine, all your files and data will still be accessible.
+
+
+
+
+
 
 
 
