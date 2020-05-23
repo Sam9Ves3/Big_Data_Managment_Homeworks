@@ -49,7 +49,7 @@ can be assumed to have the stricter properties you care about. But this approach
 doesn’t prevent the invalid data from being written to the master dataset and
 doesn’t help with determining the context in which the corruption happened.
 
-
+-------------------------------------------------------------------------------------------------------------------------
 
 # Chapter 4: Data storage on the batch layer
 
