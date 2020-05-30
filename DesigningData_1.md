@@ -40,4 +40,38 @@ software is making some kind of assumption about its environment, and whilst tha
 is usually true, it eventually stops being true for some reason.
 
 
+**5. How twitter handles the tweets delivery within 5 seconds? According to the scalability section**
+
+Twitter is moving to a hybrid of both approaches. Most users’ tweets continue to be fanned out to home timelines at the time when they are posted, but a small number of users with a very large number of followers are excepted from this fan-out. Instead, when the home timeline is read, the tweets from celebrities followed by the user are fetched separately and merged with the home timeline when the timeline is read. This hybrid approach is able to deliver consistently good performance.
+
+**6. What are the tree design principles for software systems to minimize pain during maintenance?**
+
+* *Operability*: Make it easy for operations teams to keep the system running smoothly.
+
+* *Simplicity*: Make it easy for new engineers to understand the system, by removing as much complexity as possible from the system. (Note this is not the same as simplicity of the user interface.)
+
+* *Plasticity*: Make it easy for engineers in future to make changes to the system, adapting it for unanticipated use cases as requirements change. Also known as extensibility, modifiability or malleability.
+
+
+**7. What is the relation between complexity in software with its maintenance?**
+
+Complexity slows down everyone who needs to work on the system, further increasing the cost of maintenance. In
+complex software, there is also a greater risk of introducing bugs when making a change: when
+the system is harder for developers to understand and reason about, hidden assumptions,
+unintended consequences and unexpected interactions are more easily overlooked. Conversely,
+reducing complexity greatly improves the maintainability of software, and thus simplicity
+should be a key goal for the systems we build.
+
+**8. How does Monseley and Marks define *complexity*?**
+
+as accidental if it isnot inherent in the problem that the software solves (as seen by the users), but arises only from
+the implementation
+
+**9. What word is used to refer to agility on a data system level?**
+
+Plasticity.
+
+
+**10. What are the main apps to help you in build data systems?**
+
 
