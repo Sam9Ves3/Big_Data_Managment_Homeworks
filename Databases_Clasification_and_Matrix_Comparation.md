@@ -18,7 +18,7 @@ You must send the link (not a txt file, not a docx) to a document in markdown ho
 
 ## A brief introduction
 
-When most people think of a database, they often envision the traditional relational database model (tables) made up of rows and columns. Alternative data models have become more common in recent years as developers have sought workarounds to the relational model’s limitations. These non-relational database models have come to be categorized as "NoSQL databases". This term was coined in 1998 by Carlo Strozzi as the name for his then-new NoSQL Database, chosen simply because it doesn’t use SQL for managing data.
+When most people think of a database, they often envision the traditional relational database model (tables) made up of rows and columns. Alternative data models have become more common in recent years as developers have sought workarounds to the relational model’s limitations. These non-relational database models have come to be categorized as "NoSQL databases". This term was coined in 1998 by Carlo Strozzi simply because it doesn’t use SQL for managing data.
 
 NoSQL databases are typically designed to maximize availability at the expense of consistency (any read operation will return the most recent data written to the database). The following image includes NoSQL data models:
 
@@ -37,11 +37,17 @@ To better grasp this concept , let's understand the following terms:
 
 **2. Property:** A property is relevant information related to individual nodes. Building on our recording artist example, some properties might be “vocalist,” “jazz,” or “platinum-selling artist,” depending on what information is relevant to the database.
 
-**3. Edge:** is the representation of how two nodes are related, and is a key concept of graph databases that differentiates them from RDBMSs and document stores. Edges can be:
+**3. Edge:** Also known as relationship, is the representation of how two nodes are related, and is a key concept of graph databases that differentiates them from RDBMSs and document stores. Edges can be:
 
   * Undirected: In an undirected graph, the edges between nodes exist just to show a connection between them. In this case, edges can be thought of as “two-way” relationships — there’s no implied difference between how one node relates to the other.
   
   * Directed: In a directed graph, edges can have different meanings based on which direction the relationship originates from. In this case, edges are “one-way” relationships. For example, a directed graph database might specify a relationship from Sammy to the Seaweeds showing that Sammy produced an album for the group, but might not show an equivalent relationship from The Seaweeds to Sammy.
+  
+
+
+In the graph world, connected data is equally (or more) important than individual data points. This connections-first approach to data means relationships and connections are persisted through every part of the data lifecycle.
+
+Unlike other database systems, this approach means your application doesn’t have to infer data connections using things like foreign keys or out-of-band processing. The result: your data models are simpler and yet more expressive than the ones you’d produce with relational databases or the other NoSQL.
   
 ![Curiosity about graph database](/src/info_graph_DB.png)
   
