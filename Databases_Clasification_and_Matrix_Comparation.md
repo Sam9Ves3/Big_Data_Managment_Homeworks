@@ -50,6 +50,9 @@ In the graph world, connected data is equally (or more) important than individua
 Unlike other database systems, this approach means your application doesn’t have to infer data connections using things like foreign keys or out-of-band processing. The result: your data models are simpler and yet more expressive than the ones you’d produce with relational databases or the other NoSQL.
   
 ![Curiosity about graph database](/src/info_graph_DB.png)
+
+# In-memory
+
   
 # References
 
