@@ -52,10 +52,21 @@ Unlike other database systems, this approach means your application doesn’t ha
 ![Curiosity about graph database](/src/info_graph_DB.png)
 
 # In-memory
+What makes this type of database so special is that it stands out for its performance. Unlike any other database, the information in here is not stored in disk nor SSDs, but instead, it keeps the whole dataset in the RAM or principal memory, all of this is with the intention (well achieved) of minimizing responding time because, of course, there's no need to access the disk. 
 
-  
+Now that we have established its principal characteristic, it is easy for us to see the advantages of this type of database that will be response time. Once we've understood that, the uses came to our mind pretty quickly; this kind of database is commonly used for systems that required an extremely fast (or _real time_) bidding.  
+
+The main problem of this topic is its main advantage... given the fact that there's no such thing as a "backup" in the disk, once you reboot your system or if it crashes, all of your information gets lost. As simple as that. 
+
+As you can imagine, there are ways to overcome that HUGE problem, there are ways to combine the power of in-memory data storage and the durability of the typical databases without affecting the performance. There are a certain tools that helps this goal, and what they mainly doo is that they indeed keep everything in memory but they also persist each operation in a transaction log through the disk. 
+Here you can picture the idea.
+
+![](src/memory.png)
+
+Tools like Redis, Tarantool, or Redis are just examples of the ones that work as the image suggested.
 # References
 
-Mark Drake. (2019). A Comparison of NoSQL Database Management Systems and Models. [Online]. Retrieved from Digital Ocean, web site: https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models (june 9, 2020)
-  
++ Mark Drake. (2019). A Comparison of NoSQL Database Management Systems and Models. [Online]. Retrieved from Digital Ocean, web site: https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models (june 9, 2020)
++ What Is an In-memory Database?. [Online]. Retrieved from Amazon, web site: https://aws.amazon.com/es/nosql/in-memory/ (june 10, 2020)
++ Anikin Denis. (2016) What an in-memory database is and how it persists data efficiently?. [Online]. Retrieved from Medium, web sie: https://medium.com/@denisanikin/what-an-in-memory-database-is-and-how-it-persists-data-efficiently-f43868cff4c1 (june 10, 2020)
 
