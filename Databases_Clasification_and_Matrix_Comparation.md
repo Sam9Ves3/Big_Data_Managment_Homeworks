@@ -22,8 +22,7 @@ When most people think of a database, they often envision the traditional relati
 
 NoSQL databases are typically designed to maximize availability at the expense of consistency (any read operation will return the most recent data written to the database). The following image includes NoSQL data models:
 
-![NonSQL databases](/src/NonSQL_Databases.png)
-
+![NonSQL databases](https://d1x2i8adp1v94i.cloudfront.net/wp-content/uploads/2019/08/NoSQL.png.webp)
 
 # Graph databases 
 The real world is richly interconnected, and graph databases aim to mimic those sometimes-consistent, sometimes-erratic relationships in an intuitive way. That’s what makes the graph paradigm different than other database models: it maps more realistically to how the human brain maps and processes the world around it.
