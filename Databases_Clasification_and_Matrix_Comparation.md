@@ -63,9 +63,33 @@ Here you can picture the idea.
 ![](src/memory.png)
 
 Tools like Redis, Tarantool, or Redis are just examples of the ones that work as the image suggested.
+
+# _Matrix Comparison_
+
++ ## Graph
+
+
+| Technology      | Description (according to their web pages) |  Applications | Limitations| 
+|:---------------|:-----------|:------------|:------------|
+| Apache Ignite   |Apache Ignite is a horizontally scalable, fault-tolerant distributed in-memory computing platform for building real-time applications that can process terabytes of data with in-memory speed|1. Existing or new OTLP or OLAP applications.     2.New or existing hybrid transactional/analytical processing (HTAP) applications.   3.Support for streaming analytics    4.Continuous learning use cases involving machine or deep learning|The inability to simultaneously execute SQL on top of the data in Ignite and in the RDBMS. You can perform ANSI SQL 99 queries on the data stored in the memory of the Apache Ignite cluster, but you cannot correctly execute such queries if at least some of the data is inside a third-party DBMS|
+| Aerospike DBS   |Aerospike implements a hybrid model wherein the index is purely in memory (not persisted), and data is only on a persistent storage (SSD) and is read directly from the disk. Disk I/O is not required to access the index, which makes performance predictable|This technology has several applications, but it is mostly advisable to use when have: Need for scalability and elasticity, Need for ersistance with high performance, Need for strong data consistency, Need for manageability and operational ease at scale. |Detailed here are various maximum sizes or numbers, name lengths, and character restrictions of many of the Aerospike Server objects. Maximum: 10MB per record (Aerospike Server versions earlier than 4.5. 3.4). - Maximum: 15 bytes|            
+| eXtremeDB  |eXtremeDB is an in-memory embedded database system (IMDS) ideally suited for embedded systems and other application domains that require extremely high performance, small footprint, compact storage, zero memory allocations, or any combination of these attributes|It has a good performance on embedded applications in aerospace. BAE Systems uses it in Panavia Tornado GR4 combat jet... this is pretty much used in embedded and physical systems|The first one is that you have to pay :( The range of languages you can work with is very narrow|            
+| Informix   |IBM Informix is a fast and scalable database server that manages traditional relational, object-relational, and dimensional databases. Its small footprint and self-managing capabilities are suited to embedded data-management solutions|You can buy IBM Informix Genero to write applications in the 4GL language. You can develop Informix applications with IBM Data Studio. You can easily embed Informix in your application. You can use command-line utilities and SQL statements to script every aspect of database server administration|As any other technology, this one has its own disadvantages like the compatibility with programming languages, but, according to my research, I couldn't find any real "problem" other its capacity to work with amazingly huge databases|            
+| Arango DB   |ArangoDB is a free and open-source native multi-model database systemdeveloped by ArangoDB GmbH. The database system supports three data models (key/value, documents, graphs) with one database core and a unified query language AQL (ArangoDB Query Language). The query language is declarative and allows the combination of different data access patterns in a single query. ArangoDB is a NoSQL database system but AQL is similar in many ways to SQL.|Its first applications is in team processes. Its main advantage is its native multi-model which enables teams to cooperate across use cases. For instance, one team starts work on an application that requires a Document database while another one has another type of database|Not designed for durable persistence, not query language, very limited queries|            
+
+
++ ### In Memory
++ ### Search
+
 # References
 
-+ Mark Drake. (2019). A Comparison of NoSQL Database Management Systems and Models. [Online]. Retrieved from Digital Ocean, web site: https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models (june 9, 2020)
-+ What Is an In-memory Database?. [Online]. Retrieved from Amazon, web site: https://aws.amazon.com/es/nosql/in-memory/ (june 10, 2020)
-+ Anikin Denis. (2016) What an in-memory database is and how it persists data efficiently?. [Online]. Retrieved from Medium, web sie: https://medium.com/@denisanikin/what-an-in-memory-database-is-and-how-it-persists-data-efficiently-f43868cff4c1 (june 10, 2020)
-
++ Mark Drake. (2019). A Comparison of NoSQL Database Management Systems and Models. [Online]. Retrieved from Digital Ocean, website: https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models (june 9, 2020)
++ What Is an In-memory Database?. [Online]. Retrieved from Amazon, website: https://aws.amazon.com/es/nosql/in-memory/ (june 10, 2020)
++ Anikin Denis. (2016) What an in-memory database is and how it persists data efficiently?. [Online]. Retrieved from Medium, website: https://medium.com/@denisanikin/what-an-in-memory-database-is-and-how-it-persists-data-efficiently-f43868cff4c1 (june 10, 2020)
++ List of in-memory databases. [Online]. Retrieved from Wikipedia, website: https://en.wikipedia.org/wiki/List_of_in-memory_databases
++ Open Source In-Memory Computing Platform. [Online]. Retreived from Apache Ignite, website: https://ignite.apache.org/
++ Apache Ignite Introduction. [Online]. Retrieved from Gridgain, website: https://www.gridgain.com/resources/papers/introducing-apache-ignite 
++ Technology | Aerospike. [Online]. Retreived from Aerospike, website: https://www.aerospike.com/technology/
++ Hybrid Persistent and In-Memory database. [Online]. Retreived from McObject, web site: https://www.mcobject.com/software_eval/
++ IBM Informix. [Online]. Retreived from IBM, website: https://www.ibm.com/mx-es/products/informix
++ ArangoDB. [Online]. Retreived from Arango DB, website: https://www.arangodb.com/why-arangodb/references/
