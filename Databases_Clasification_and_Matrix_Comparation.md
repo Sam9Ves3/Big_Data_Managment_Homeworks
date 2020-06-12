@@ -66,7 +66,7 @@ Tools like Redis, Tarantool, or Redis are just examples of the ones that work as
 
 # _Matrix Comparison_
 
-+ ## Graph
++ ## In-memory
 
 
 | Technology      | Description (according to their web pages) |  Applications | Limitations| 
@@ -78,7 +78,7 @@ Tools like Redis, Tarantool, or Redis are just examples of the ones that work as
 | Arango DB   |ArangoDB is a free and open-source native multi-model database systemdeveloped by ArangoDB GmbH. The database system supports three data models (key/value, documents, graphs) with one database core and a unified query language AQL (ArangoDB Query Language). The query language is declarative and allows the combination of different data access patterns in a single query. ArangoDB is a NoSQL database system but AQL is similar in many ways to SQL.|Its first applications is in team processes. Its main advantage is its native multi-model which enables teams to cooperate across use cases. For instance, one team starts work on an application that requires a Document database while another one has another type of database|Not designed for durable persistence, not query language, very limited queries|            
 
 
-+ ### In Memory
++ ### Graph
 + ### Search
 
 # References
