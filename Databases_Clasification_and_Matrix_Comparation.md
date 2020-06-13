@@ -1,28 +1,12 @@
-Las intrucciones: 
-
-According to the talk by Paco Ocampo, in Google Cloud there are 8 types of databases:  Relational,  Key-Value,  Document,  In-memory,  Graph,  Search,  Time-series and Ledger.  According to wikipedia (https://en.wikipedia.org/wiki/NoSQL), you can split key-value in four types: Cache, store, store eventually consistent and store ordered. Also there are tuple-store, wide-column store and native multi-model databases.
-
-Your work consist in two parts: 
-
-First make a concise description of the type of databases you are researching (you can improve the content of pages such as https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models or https://www.accionlabs.com/articles/2018/4/9/choosing-a-nosql-database-technology-comparison-matrix). 
-
-Second you must make a matrix of the family of databases according to the  scope like the page https://socialcompare.com/en/comparison/nosql-databases-solution-cassandra-mongodb-couchdb
-
-You must send the link (not a txt file, not a docx) to a document in markdown hosted in github.
-
-# Nos toco: Graph, In-memory, Search
-
-
--------------------------
-
-
 # A brief introduction
 
 When most people think of a database, they often envision the traditional relational database model (tables) made up of rows and columns. Alternative data models have become more common in recent years as developers have sought workarounds to the relational model’s limitations. These non-relational database models have come to be categorized as "NoSQL databases". This term was coined in 1998 by Carlo Strozzi simply because it doesn’t use SQL for managing data.
 
 NoSQL databases are typically designed to maximize availability at the expense of consistency (any read operation will return the most recent data written to the database). The following image includes NoSQL data models:
 
-![NonSQL databases](https://d1x2i8adp1v94i.cloudfront.net/wp-content/uploads/2019/08/NoSQL.png.webp)
+![NonSQL databases](src/NonSQL_Databases.png)
+
+[Image source here](https://www.dbbest.com/technologies/nosql-databases/)
 
 # Graph databases 
 The real world is richly interconnected, and graph databases aim to mimic those sometimes-consistent, sometimes-erratic relationships in an intuitive way. That’s what makes the graph paradigm different than other database models: it maps more realistically to how the human brain maps and processes the world around it.
@@ -48,7 +32,9 @@ In the graph world, connected data is equally (or more) important than individua
 
 Unlike other database systems, this approach means your application doesn’t have to infer data connections using things like foreign keys or out-of-band processing. The result: your data models are simpler and yet more expressive than the ones you’d produce with relational databases or the other NoSQL.
   
-![Curiosity about graph database](/src/info_graph_DB.png)
+![Curiosity about graph database](src/info_graph_DB.png)
+
+[Image source here](https://www.ontotext.com/blog/graph-databases/)
 
 # In-memory
 What makes this type of database so special is that it stands out for its performance. Unlike any other database, the information in here is not stored in disk nor SSDs, but instead, it keeps the whole dataset in the RAM or principal memory, all of this is with the intention (well achieved) of minimizing responding time because, of course, there's no need to access the disk. 
