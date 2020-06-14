@@ -126,3 +126,8 @@ Some examples of search-engine databases are Elasticsearch, Splunk and Solr
 + Brown M.(march, 2018) Get The Basics On NoSQL Databases: Search Engine Databases [online]. Retrieved from: https://www.forbes.com/sites/metabrown/2018/03/31/get-the-basics-on-nosql-databases-search-engine-databases/#60ca56d815b5 (June 14th, 2020)
 + What is asearch-engine database? [online]. Retrieved from: https://aws.amazon.com/es/nosql/search/ (June 14th, 2020).
 + DB-Engines ranking of graphs DBMS. [online]. Retrieved from https://db-engines.com/en/ranking/graph+dbms
+
+# Authors:
++ Samuel Venegas
++ Alan Peraza
++ Mario Morales
