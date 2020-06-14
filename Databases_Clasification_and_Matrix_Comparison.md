@@ -1,6 +1,6 @@
 # A brief introduction
 
-When most people think of a database, they often envision the traditional relational database model (tables) made up of rows and columns. Alternative data models have become more common in recent years as developers have sought workarounds to the relational model’s limitations. These non-relational database models have come to be categorized as "NoSQL databases". This term was coined in 1998 by Carlo Strozzi simply because it doesn’t use SQL for managing data.
+When most people think of a database, they often envision the traditional relational database model (tables) made out of rows and columns. Alternative data models have become more common in recent years as developers have sought workarounds to the relational models limitations. These non-relational database models have come to be categorized as "NoSQL databases". This term was coined in 1998 by Carlo Strozzi simply because it doesn’t use SQL for managing data.
 
 NoSQL databases are typically designed to maximize availability at the expense of consistency (any read operation will return the most recent data written to the database). The following image includes NoSQL data models:
 
@@ -36,7 +36,7 @@ Unlike other database systems, this approach means your application doesn’t ha
 
 [Image source here](https://www.ontotext.com/blog/graph-databases/)
 
-# In-memory
+# In-memory databases
 What makes this type of database so special is that it stands out for its performance. Unlike any other database, the information in here is not stored in disk nor SSDs, but instead, it keeps the whole dataset in the RAM or principal memory, all of this is with the intention (well achieved) of minimizing responding time because, of course, there's no need to access the disk. 
 
 Now that we have established its principal characteristic, it is easy for us to see the advantages of this type of database that will be response time. Once we've understood that, the uses came to our mind pretty quickly; this kind of database is commonly used for systems that required an extremely fast (or _real time_) bidding.  
@@ -49,6 +49,25 @@ Here you can picture the idea.
 ![](src/memory.png)
 
 Tools like Redis, Tarantool, or Redis are just examples of the ones that work as the image suggested.
+
+-------------------------------------------------------------------------------------------------------------------
+# Search databases (or search-engine database)
+Briefly, a database search engine is a search engine that operates on material stored in a digital database.
+It is is a type of non-relational database that is dedicated to the search of data content. Search-engine databases use indexes to categorize the similar characteristics among data and facilitate search capability. They are also optimized for dealing with data that may be long, semistructured, or unstructured, and they typically offer specialized methods such as full-text search, complex search expressions, and ranking of search results. 
+
+Search engines deal with data that does not conform to the rigid structural requirements of relation databases. Data for search may be long, semi-structured or unstructured.
+
+Because search often requires dealing with large volumes of content, search engines often provide special features, such as distributed computing, for scalability.
+![Source: www.lifewire.com](https://www.lifewire.com/thmb/8v6pDYT-JjrYn-ypIME-jiNP-Zg=/1732x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1047578412-692fa117cf86450287d8873eeb1a95c8-aa8d654cec814174a9e07bdae85a1eb7.jpg)
+[Image source](https://www.consulthink.it/es/elasticsearch-que-es-como-funciona-y-caracteristicas/)
+
+Search-engine databases are useful for:
+
+**Text:** search: Search-engine databases can handle full-text search faster than relational databases. For example, an e-commerce website can use search-engine databases to provide instant autocompletes or suggestions for its customers. Search-engine databases can sort relevant results based on characteristics such as name, price, category, or release data, and display the results in a structured view. 
+
+**Logging and analysis:** Maintaining larger applications that are either distributed across several nodes or consist of several smaller applications searching for events in log files can become tedious. Search-engine databases can handle the logging more efficiently. You can centralize your logs from different applications by indexing them using a search-engine database. For example you can see the logs of your Apache web server (Database search engines are usually included with major database software products.) combined with the log files of your application server. Because all the information is available in real time, you can implement a visual representation of what is happening in your system in real time, which can help you to find problems more quickly. 
+
+Some examples of search-engine databases are Elasticsearch, Splunk and Solr
 
 # _Matrix Comparison_
 
@@ -63,9 +82,23 @@ Tools like Redis, Tarantool, or Redis are just examples of the ones that work as
 | Informix   |IBM Informix is a fast and scalable database server that manages traditional relational, object-relational, and dimensional databases. Its small footprint and self-managing capabilities are suited to embedded data-management solutions|You can buy IBM Informix Genero to write applications in the 4GL language. You can develop Informix applications with IBM Data Studio. You can easily embed Informix in your application. You can use command-line utilities and SQL statements to script every aspect of database server administration|As any other technology, this one has its own disadvantages like the compatibility with programming languages, but, according to my research, I couldn't find any real "problem" other its capacity to work with amazingly huge databases|            
 | Arango DB   |ArangoDB is a free and open-source native multi-model database systemdeveloped by ArangoDB GmbH. The database system supports three data models (key/value, documents, graphs) with one database core and a unified query language AQL (ArangoDB Query Language). The query language is declarative and allows the combination of different data access patterns in a single query. ArangoDB is a NoSQL database system but AQL is similar in many ways to SQL.|Its first applications is in team processes. Its main advantage is its native multi-model which enables teams to cooperate across use cases. For instance, one team starts work on an application that requires a Document database while another one has another type of database|Not designed for durable persistence, not query language, very limited queries|            
 
+-----------------------------------------------
 
 + ### Graph
+
+-----------------------------------------------
+
 + ### Search
+|Search Engine Database   |Description |MapReduce|APIs and other access methods|Supported programming languages|
+|:-----------------------:|:----------:|:-------:|:---------------------------:|:-----------------------------:|
+|Splunk                   |Analytics Platform for Big Data|Yes|HTTP REST|C#, Java, JavaScript, PHP, Python, Ruby|
+|Solr                     |A widely used distributed, scalable search engine based on Apache Lucene|spark-solr: [link](github.com/­lucidworks/­spark-solr) and streaming expressions to reduce |Java API, RESTful HTTP/JSON API|.Net, Erlang, Java, JavaScript, any language that supports sockets and either XML or JSON, Perl, PHP, Python, Ruby, Scala|
+|Microsoft Azure Search   |Search-as-a-service for web and mobile app development|No|RESTful HTTP API|.Net, C#|
+|Amazon CloudSearch       |A hosted search engine service by Amazon with the data stored in Amazons cloud|No|HTTP API|NA|
+|Alibaba Cloud Log Service|A complete real-time data logging service that supports collection, consumption, shipping, search, and analysis of logs.|ES-Hadoop Connector|HTTP REST|NA|
+|Elasticsearch            |A distributed, RESTful modern search and analytics engine based on Apache Lucene|	ES-Hadoop Connector|Java API, RESTful HTTP/JSON API|.Net, Groovy, Community Contributed Clients, Java, JavaScript, Perl, PHP, Python, Ruby|
+
+-----------------------------------------------
 
 # References
 
@@ -79,3 +112,6 @@ Tools like Redis, Tarantool, or Redis are just examples of the ones that work as
 + Hybrid Persistent and In-Memory database. [Online]. Retreived from McObject, web site: https://www.mcobject.com/software_eval/
 + IBM Informix. [Online]. Retreived from IBM, website: https://www.ibm.com/mx-es/products/informix
 + ArangoDB. [Online]. Retreived from Arango DB, website: https://www.arangodb.com/why-arangodb/references/
++ DB-Engines Ranking of Search Engines [online]. Retrieved from: https://db-engines.com/en/ranking/search+engine (June 14 th, 2020)
++ Brown M.(march, 2018) Get The Basics On NoSQL Databases: Search Engine Databases [online]. Retrieved from: https://www.forbes.com/sites/metabrown/2018/03/31/get-the-basics-on-nosql-databases-search-engine-databases/#60ca56d815b5 (June 14th, 2020)
++ What is asearch-engine database? [online]. Retrieved from: https://aws.amazon.com/es/nosql/search/ (June 14th, 2020).
