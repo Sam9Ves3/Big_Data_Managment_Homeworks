@@ -24,7 +24,7 @@ multiple times on average), so we can also merge several segments into one.
 It means throwing away all key-value pairs in the log except for the most recent
 update for each key.
 
-**5. What happens to segments during the proccess of merging them**
+**5. What happens to segments during the proccess of merging them?**
 
 Segments are never modified after they have been written, so the merged segment is written to a
 new file. While the merge is going on, we can still continue to serve read and write requests as
