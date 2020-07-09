@@ -1,3 +1,7 @@
+----------------------------
+# Designing Data-Intensive Applications
+----------------------------
+
 ## Chapter 3: Storage and Retrieval
 
 
@@ -37,37 +41,4 @@ segment files can simply be deleted.
 +  Appending and segment merging are sequential write operations, which are generally much faster
 than random writes.
 
-+ Concurrency and crash recovery are much simpler if files are immutable. For example, you don’t have
-to worry about the case where a crash happened while a value was being overwritten, leaving you with
-a file containing part of the old and part of the new value spliced together.
-
-+  Merging old segments avoids problems of data files getting fragmented over time.
-
-**7. Maintaining a sorted structure on memory is easier than in disk, but what is the main problem?**
-
-If the database crashes, the most recent writes (which are in the memtable but not yet written out to disk) are lost
-
-
-**8. How to avoid losing writes when using memtable and the database crashes?**
-
-We can keep a separate log on disk to which every write is immediately appended. That log is not in sorted order, but that doesn’t
-matter, because its only purpose is to restore the memtable after a crash. Every time the
-memtable is written out to an SSTable, the corresponding log can be discarded.
-
-
-**9. Why keeping a cascade of SSTables that are merged in the background is considered very effective?**
-
-Since data is stored in sorted order, you can efficiently perform range queries (scanning all
-keys above some minimum and up to some maximum). And because the disk writes are
-sequential, the LSM-tree can support remarkably high write throughput.
-
-
-**10. How to make the database resilent to crashes when using B-trees?**
-
-It is normal for B-tree implementations to include an additional data structure on disk: a *write-ahead log* (WAL, also known as redo log).
-This is an append-only file to which every B-tree modification must be written before it can be
-applied to the pages of the tree itself. When the database comes back up after a crash, this log is
-used to restore the B-tree back to a consistent state.
-
-
-
++ Concurrenc
