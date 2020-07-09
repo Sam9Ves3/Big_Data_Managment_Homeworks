@@ -1,4 +1,6 @@
-# Designing Data-Intensive Applications 
+----------------------------
+# Designing Data-Intensive Applications
+----------------------------
 
 ## Chapter 1. Reliable, Scalable and Maintainable Applications
 
