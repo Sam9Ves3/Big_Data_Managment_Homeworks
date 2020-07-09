@@ -1,5 +1,8 @@
-# Chapter 4: Replication
+----------------------------
+# Designing Data-Intensive Applications
+----------------------------
 
+## Chapter 5: Replication
 
 **1. What are the three main reasons to distribute a database across multiple
 machines?**
@@ -42,8 +45,6 @@ remaining nodes. Replication can also help improve performance.
 
 2. Partitioning: splitting a big database into smaller subsets called partitions, so that different partitions can be
 assigned to different nodes (also known as *sharding*).
-
-
 
 
 **6. What is the process of the *leader-based replication*?**
