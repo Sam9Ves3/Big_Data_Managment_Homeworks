@@ -1,4 +1,8 @@
-# Chapter 4: Encoding and Evolution
+----------------------------
+# Designing Data-Intensive Applications
+----------------------------
+
+## Chapter 4: Encoding and Evolution
 
 **1. What are the two compatibilities to run old and new versions of the code?**
 
