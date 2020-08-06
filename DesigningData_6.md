@@ -2,7 +2,7 @@
 # Designing Data-Intensive Applications
 ----------------------------
 
-## Chapter 5: Replication
+## Chapter 6: Partitioning
 
 **1. What are the two main approaches to partitioning?**
 
